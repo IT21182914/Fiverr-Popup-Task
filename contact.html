@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Define character encoding and responsive viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: Page title for search engines and browser tab -->
+    <title>Contact - My Website</title>
+
+    <!-- SEO: Meta description for search engine results -->
+    <meta name="description" content="Get in touch with My Website. Use our contact form to reach out for inquiries, feedback, or support." />
+
+    <!-- SEO: Keywords for search engine indexing -->
+    <meta name="keywords" content="contact, my website, support, feedback, inquiries, get in touch" />
+
+    <!-- SEO: Robots directive to allow indexing -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- SEO: Author information -->
+    <meta name="author" content="My Website Team" />
+
+    <!-- Open Graph: Improve social media sharing -->
+    <meta property="og:title" content="Contact Us - My Website" />
+    <meta property="og:description" content="Get in touch with My Website. Use our contact form to reach out for inquiries, feedback, or support." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mywebsite.com/contact.html" />
+    <meta property="og:image" content="https://www.mywebsite.com/assets/images/og-image.jpg" />
+
+    <!-- Twitter Card: Enhance Twitter sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us - My Website" />
+    <meta name="twitter:description" content="Get in touch with My Website. Use our contact form to reach out for inquiries, feedback, or support." />
+    <meta name="twitter:image" content="https://www.mywebsite.com/assets/images/og-image.jpg" />
+
+    <!-- Favicon for branding -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- Import Google Fonts for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet" />
+
+    <!-- Import Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+  <div id="main">
+
+    <header id="header">
+
+      <div class="header-container">
+        <a href="index.html" class="logo">My Website</a>
+        <div class="menu-toggle" id="menu-toggle" tabindex="0" aria-label="Toggle menu" aria-expanded="false">
+          ☰ Menu
+        </div>
+      </div>
+
+      <nav class="dropdown-menu" id="dropdown-menu" aria-hidden="true">
+
+        <div class="menu-header">
+          <span>Menu</span>
+          <button class="close-menu" aria-label="Close menu">×</button>
+        </div>
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li>
+
+            <a href="#" class="submenu-toggle" aria-expanded="false">
+              Layouts
+              <i class="fas fa-chevron-down"></i>
+            </a>
+
+            <ul class="submenu">
+
+              <li><a href="index.html">Index Page</a></li>
+              <li><a href="post.html">Post Page</a></li>
+              <li><a href="category.html">Category Page</a></li>
+              <li><a href="category2.html">Category Page 2</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+          </li>
+
+          <li><a href="index.html">Index Page</a></li>
+          <li><a href="post.html">Post Page</a></li>
+          <li><a href="category.html">Category Page</a></li>
+          <li><a href="category2.html">Category Page 2</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+
+        </ul>
+
+      </nav>
+
+    </header>
+
+    <main id="body">
+
+      <section id="major">
+        <h1>Contact</h1>
+        <h2>Description of this contact page</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          quae, dignissimos omnis veniam, unde, iusto officia reiciendis iure
+          at dolore magni qui consequuntur saepe eligendi similique debitis
+          ipsam necessitatibus vero? ipsum dolor sit amet, consectetur
+          adipiscing elit. Fusce ut velit laoreet, tempus arcu eu, molestie
+          tortor.</p>
+      </section>
+      
+      <!-- Form Code  -->
+    <section id="contact">
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group last">
+            <textarea id="message" name="message" placeholder="Enter your message" rows="6" required></textarea>
+          </div>
+          <div class="form-group center">
+            <button type="submit" class="send-button">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer">
+
+      <div class="footer-container">
+
+        <p>© 2025 MyWebsite. All rights reserved.</p>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
