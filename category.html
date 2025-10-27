@@ -427,12 +427,18 @@
 
     <script src="assets/js/main.js"></script>
 
-    <!-- Privacy Popup Banner -->
-    <div
-      id="privacy-popup-overlay"
-      style="
-        display: none;
-        position: fixed;
+    <!-- Privacy Popup -->
+    <div id="privacy-popup" class="privacy-popup">
+      <div class="popup-content">
+        <div class="popup-icon">!</div>
+        <h3>Your Privacy Matters</h3>
+        <p>We do not use cookies, collect personal data, or track you in any way.</p>
+        <button id="close-popup" class="popup-button">Got It!</button>
+      </div>
+    </div>
+  </body>
+</html>
+
         top: 0;
         left: 0;
         width: 100%;

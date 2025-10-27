@@ -784,10 +784,96 @@ h6 {
 }
 
 
+/* ===== Privacy Popup ===== */
+.privacy-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.privacy-popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-content {
+    background: #ffffff;
+    color: #000000;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.popup-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: #ff0000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.popup-content h3 {
+    margin: 0 0 15px 0;
+    color: #000000;
+}
+
+.popup-content p {
+    margin: 0 0 25px 0;
+    color: #000000;
+}
+
+.popup-button {
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.popup-button:hover {
+    background: #000000;
+}
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 380px) {
     .index-button {
         width: 100%;
+    }
+
+    .popup-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .popup-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .popup-button {
+        padding: 10px 30px;
+        font-size: 0.9rem;
     }
 }
 
@@ -796,6 +882,14 @@ h6 {
     .form-row {
         flex-direction: column;
     }
+
+    .popup-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .popup-content p {
+        font-size: 0.95rem;
+    }
 }
 
 
@@ -803,5 +897,9 @@ h6 {
     .meta {
         flex-direction: column;
         gap: 5px;
+    }
+
+    .popup-content {
+        max-width: 450px;
     }
 }

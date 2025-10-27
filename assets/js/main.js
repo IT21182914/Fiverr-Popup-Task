@@ -1,36 +1,51 @@
 // Get DOM elements
-const menuToggle = document.getElementById('menu-toggle');
-const dropdownMenu = document.getElementById('dropdown-menu');
-const closeMenu = document.querySelector('.close-menu');
-const submenuToggles = document.querySelectorAll('.submenu-toggle');
-const submenus = document.querySelectorAll('.submenu');
+const menuToggle = document.getElementById("menu-toggle");
+const dropdownMenu = document.getElementById("dropdown-menu");
+const closeMenu = document.querySelector(".close-menu");
+const submenuToggles = document.querySelectorAll(".submenu-toggle");
+const submenus = document.querySelectorAll(".submenu");
 
 // Toggle dropdown menu with animation
-menuToggle.addEventListener('click', function () {
-  const isExpanded = this.getAttribute('aria-expanded') === 'true';
-  this.setAttribute('aria-expanded', !isExpanded);
-  dropdownMenu.setAttribute('aria-hidden', isExpanded);
+menuToggle.addEventListener("click", function () {
+  const isExpanded = this.getAttribute("aria-expanded") === "true";
+  this.setAttribute("aria-expanded", !isExpanded);
+  dropdownMenu.setAttribute("aria-hidden", isExpanded);
 
-  dropdownMenu.classList.toggle('open');
+  dropdownMenu.classList.toggle("open");
 });
 
 // Close dropdown menu
-closeMenu.addEventListener('click', function () {
-  menuToggle.setAttribute('aria-expanded', 'false');
-  dropdownMenu.setAttribute('aria-hidden', 'true');
-  dropdownMenu.classList.remove('open');
+closeMenu.addEventListener("click", function () {
+  menuToggle.setAttribute("aria-expanded", "false");
+  dropdownMenu.setAttribute("aria-hidden", "true");
+  dropdownMenu.classList.remove("open");
 });
 
 // Toggle submenu and arrow
 submenuToggles.forEach((toggle, index) => {
-  toggle.addEventListener('click', function () {
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !isExpanded);
+  toggle.addEventListener("click", function () {
+    const isExpanded = this.getAttribute("aria-expanded") === "true";
+    this.setAttribute("aria-expanded", !isExpanded);
 
     const submenu = submenus[index];
-    submenu.style.display = isExpanded ? 'none' : 'block';
+    submenu.style.display = isExpanded ? "none" : "block";
 
-    const arrow = this.querySelector('.arrow');
-    arrow.textContent = isExpanded ? '▼' : '▲';
+    const arrow = this.querySelector(".arrow");
+    arrow.textContent = isExpanded ? "▼" : "▲";
+  });
+});
+
+// Privacy Popup
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("privacy-popup");
+  const closeBtn = document.getElementById("close-popup");
+
+  if (!localStorage.getItem("privacyPopupShown")) {
+    popup.classList.add("active");
+  }
+
+  closeBtn.addEventListener("click", function () {
+    popup.classList.remove("active");
+    localStorage.setItem("privacyPopupShown", "true");
   });
 });
