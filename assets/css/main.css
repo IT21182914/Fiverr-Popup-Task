@@ -784,7 +784,6 @@ h6 {
 }
 
 
-/* ===== Privacy Popup ===== */
 .privacy-popup {
     position: fixed;
     top: 0;
@@ -854,7 +853,6 @@ h6 {
 }
 
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 380px) {
     .index-button {
         width: 100%;

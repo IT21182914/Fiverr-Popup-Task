@@ -35,7 +35,6 @@ submenuToggles.forEach((toggle, index) => {
   });
 });
 
-// Privacy Popup
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.getElementById("privacy-popup");
   const closeBtn = document.getElementById("close-popup");
